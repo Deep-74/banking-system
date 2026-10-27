@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:payment_test;DB_CLOSE_DELAY=-1;MODE=MySQL
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  kafka:
+    bootstrap-servers: localhost:9092
+
+razorpay:
+  key-id: rzp_test_key
+  key-secret: rzp_test_secret
+  webhook-secret: rzp_test_webhook
+

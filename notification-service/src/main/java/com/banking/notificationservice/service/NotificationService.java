@@ -180,7 +180,7 @@ public class NotificationService
   }
 
 
-  private void sendAlert(String accountNumber , String subject, String message)
+  void sendAlert(String accountNumber , String subject, String message)
   {
       log.info("-------------");
       log.info("Account: {} ",accountNumber);

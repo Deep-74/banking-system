@@ -48,11 +48,11 @@ spring:
                   redis-rate-limiter.replenishRate: 10
                   redis-rate-limiter.burstCapacity: 20
 
-  server:
-    port: 8080
+server:
+  port: 8080
 
-  management:
-    endpoints:
-      web:
-        exposure:
-          include: health,info,gateway
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway

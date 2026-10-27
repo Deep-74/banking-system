@@ -5,7 +5,7 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
-      group-id: notification-service-group #accout-service-group mention in video
+      group-id: notification-service-group #consumer group id .
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
@@ -19,8 +19,8 @@ spring:
                 headers: false
             value:
               default:
-                type: java.util.HashMap
-    producer:
+                type: java.util.HashMap    # trusted package mean only this package class can be deserialized. If you want to deserialize any class then use * in trusted packages. If y
+    producer:                              #you want to deserialize only specific class then mention that class in trusted packages.
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
